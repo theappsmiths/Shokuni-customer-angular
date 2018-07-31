@@ -1,0 +1,283 @@
+
+<div class="header" id="main" style="background:#fff !important;">
+    <div id="mySidenav" class="sidenav">
+    
+        <a><span class="glyphicon glyphicon-align-left" style="width: 19px;"></span></a>
+        <a><span class="glyphicon glyphicon-option-horizontal" style="width: 19px;"></span></a>
+        <a href="#" routerLink="/home"><p><img src="assets/images/history.svg" style="width: 14px;"/></p></a>
+        <a href="#" routerLink="/home"><img class="accordion" src="assets/images/profile.svg" style="width: 14px;"/></a>
+        <!-- <div class="panel">
+          <a href="#" routerLink="/changepassword"><span class="glyphicon glyphicon-flag"></span></a>
+          <a href="#" routerLink="/yourprofile"><span class="glyphicon glyphicon-flag"></span></a>
+          <a href="#" routerLink="/editprofile"><span class="glyphicon glyphicon-flag"></span></a>
+        </div> -->
+        <a><span class="glyphicon glyphicon-option-horizontal" style="width: 19px;"></span></a>
+        <a href="#" routerLink="/home"><img src="assets/images/support.svg" style="width: 14px;"/></a>
+        <!-- <a href="#" routerLink="/changepassword"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/yourprofile"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/editprofile"><span class="glyphicon glyphicon-flag"></span></a> -->
+        <!-- <a href="#" routerLink="/payment"><span class="glyphicon glyphicon-option-horizontal"></span></a> -->
+       <!--  <a><span class="glyphicon glyphicon-option-horizontal"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a> -->
+      </div>
+    <!-- <div id="mySidenav" class="sidenav">
+    
+        <a><span class="glyphicon glyphicon-align-left"></span></a>
+        <a><span class="glyphicon glyphicon-option-horizontal"></span></a>
+        <a href="#" routerLink="/home"><span class="glyphicon glyphicon-home" style="color:#6d2839;"></span></a>
+        <a href="#" routerLink="/changepassword"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/yourprofile"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/editprofile"><span class="glyphicon glyphicon-flag"></span></a>
+        <!-- <a href="#" routerLink="/payment"><span class="glyphicon glyphicon-option-horizontal"></span></a> --
+        <a><span class="glyphicon glyphicon-option-horizontal"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a>
+        <a href="#" routerLink="/login"><span class="glyphicon glyphicon-flag"></span></a>
+      </div> -->
+    <div class="row">
+      <div class="col-md-6" (click)="openNav()">
+        
+          <img class="col-md-6" src="assets/images/Shokuni-Logo_Black.png" style="margin:21px;padding-left:81px;
+          width:203px;padding-top:12px;">
+      </div>
+  
+      <div class="col-md-4">
+        <p><img  src="assets/images/background.png" style="margin:20px;
+          width: 34px;
+          border-radius: 50%;
+          float: right;
+          height: 34px;"><img  src="assets/images/event.png" style="margin: 27px;
+          width: 20px;
+          border-radius: 50%;
+          float: right;
+          height: 22px;"></p>
+      </div>
+        
+       
+        
+    </div>
+    
+      
+  </div>
+<div class="bak" style="background:#f0f1f6;">
+  
+  <br>
+  <div class="sub-header" >
+      <h4 style="text-align: left;
+      margin-left: 210px;
+      font-size: 18px;">Password</h4>
+  </div>
+  
+    <div class="row">
+  
+        <div class="form-group required col-md-12 ">
+          <div class="container-fluid">
+            
+            <div class="card card-block card_list">
+                <p class="p_tag">Edit Profile</p>
+            <div class="errorMessage" *ngIf="invalidcred">Invalid Login Details</div>
+          <form *ngIf="login_form" [formGroup]="login_form" (submit)="submitLogin(login_form)" class="bak form-horizontal" novalidate>
+             
+                <!-- login form HTML -->
+                 <ul class="list-group list-group-flush text-left">
+                  <li class="list-group-item"> 
+                    <!-- get name of donor -->
+                    <div class="form-row" style="padding-left:21px;">
+                      <div class="form-group required col-md-12">
+                       <label for="amount" class="col_pss col-form-label col-form-label-sm">First Name: <span class="aster"> *</span></label> 
+                        <input type="password"  formControlName="fname" class="inpt_bx form-control form-control-sm" placeholder="" autocomplete="off" maxlength="255" required />
+                      </div>
+                      <hr>
+                      </div>
+                      <div class="form-row" style="padding-left:21px;">
+                      <div class="form-group required col-md-12">
+                       <label for="password" class="col_pss col-form-label col-form-label-sm">Last Name: <span class="aster"> *</span></label> 
+                        <input type="password" formControlName="lname" class="inpt_bx form-control form-control-sm" placeholder="" autocomplete="off" maxlength="255" required />
+                      </div>
+                    </div>
+                    <div class="form-row" style="padding-left:21px;">
+                        <div class="form-group required col-md-12">
+                        <label for="password" class="col_pss col-form-label col-form-label-sm">Email: <span class="aster"> *</span></label> 
+                          <input type="password" formControlName="email" class="inpt_bx form-control form-control-sm" placeholder="" autocomplete="off" maxlength="255" required />
+                        </div>
+                      </div>
+                      <p style="color:#fec152;font-size:9px;">Your email has not yet been verified: <a style="color:#132149;font-weight:400;">Resend Verification</a></p>
+
+                     
+                      <div class="form-row" style="padding-left:21px;">
+                          <div class="form-group required col-md-12">
+                          <label for="password" class="col_pss col-form-label col-form-label-sm">Country: <span class="aster"> *</span></label> <br>
+                          <select class="inpt_bx" (change)="filterForeCasts($event.target.value)" style="height:37px;border: 1px solid #cccccc;">
+                            <option *ngFor="let summary of countries" value={{summary.id}}>
+                                  {{summary.name}}
+                              </option>
+                          </select> 
+                            <!-- <input type="password" formControlName="country" class="inpt_bx form-control form-control-sm" placeholder="United Kingdom" autocomplete="off" maxlength="255" required /> -->
+                          </div>
+                        </div>
+
+                        <div class="form-row" style="padding-left:25px;">
+                            <div class="form-group required col-md-12">
+                              <div class="row" style="padding-left:16px;">
+                                  <div class="form-group required col-md-2">
+                                      <label for="password" class="col_pss col-form-label col-form-label-sm">Profile Photo:</label><br>
+                                      <img src="assets/images/barber.jpeg" width="125px;" style="margin:0px;
+                                      padding-left:0px;">
+                                  </div>
+                                  <div class="form-group required col-md-10"  style="padding-left:40px;">
+                                      <p style="font-size:10px;color:rgb(170,170,170);font-weight:600;padding: 49px 0 0px 0px;">Upload New Profile Picture</p>
+                                      <button [disabled]="!login_form.valid" class="upload_btn">Upload                </button>
+                                  </div>
+
+                              </div>
+                           
+                          
+                              <!-- <input type="password" formControlName="country" class="inpt_bx form-control form-control-sm" placeholder="United Kingdom" autocomplete="off" maxlength="255" required /> -->
+                            </div>
+                           <!-- <div class="form-group required col-md-9">
+                             <div>
+                                <p style="font-size:10px;color:rgb(170,170,170);font-weight:600;">Upload New Profile Picture</p>
+                                <button [disabled]="!login_form.valid" class="save_btn">Upload                      </button>
+                             </div>
+                                
+                            </div> --> 
+                          </div>
+
+                        <div class="form-row" style="padding-left:21px;">
+                            <div class="form-group required col-md-12">
+                            <label for="password" class="col_pss col-form-label col-form-label-sm">Mobile Number: <span class="aster"> *</span></label> 
+                              <input type="password" formControlName="number" class="inpt_bx form-control form-control-sm" placeholder="(+44)798466132" autocomplete="off" maxlength="25" required />
+                            </div>
+                          </div>
+                          <p style="color:#fec152;font-size:9px;">Your mobile has not yet been verified: <a style="color:#132149;font-weight:400;">Resend Verification</a></p>
+
+                   <!--  <div class="form-row">
+                        <div class="form-group required col-md-6">
+                            <input type="checkbox" [checked]="false"  id ="remember" /><span class="rember_pswrd" >Remember</span>
+                        </div>
+                        <div class="form-group required col-md-6">
+                        <a class="forgt_psswrd" href="" routerLink="/forgotpassword/:token">Forgot Password?</a>
+                        </div>
+                    </div> -->
+                     </li>
+                </ul> 
+                <p style="color:#c2c2c2;font-size:11px;margin: 10px;"> <span class="aster"> *</span> Indicates Required</p>
+                <div class="">
+                    <div class="row">
+                      <div class="col-md-12">
+                          <button [disabled]="!login_form.valid" class="save_btn">Save                      </button>
+                          <button [disabled]="!login_form.valid" class="cancl_butn">Cancel
+
+                            </button>
+                      </div>
+                     <!--  <div class="col-md-6">
+                          <button [disabled]="!login_form.valid" class="submit_btn_clear">Cancel
+
+                            </button>
+                      </div> -->
+                    </div>
+                    
+                  </div>
+                <!-- submit button -->
+               
+              </form>
+            </div>
+            
+              <!-- <div class="sign_upp">
+                <p>Don't have an account?<a class="anchor_tag" href="" routerLink="/dashboard">Sign Up</a></p>
+                <!-- <a class="btn btn-link" routerLink="/dashboard">Dashboard</a> --
+              </div> -->
+            </div>
+          
+          </div>
+          <div class="card card-block card_list" style="width:68% !important;margin-top:91px !important;">
+              <p class="p_tag">Request Data</p>
+              <ul class="list-group list-group-flush text-left">
+                  <li class="list-group-item">
+                    <p style="font-size:11px;color:rgb(170,170,170);font-weight:700;">Download a CSV file containing all of the personal data that we store your profile</p> 
+                    </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button [disabled]="!login_form.valid" class="save_btn">Request                      </button>
+                            </div>
+                            </div>
+                            
+          </div>
+
+          <div class="card card-block card_list" style="width:68% !important;margin-top:40px;">
+              <p class="p_tag">Delete Account</p>
+              <ul class="list-group list-group-flush text-left">
+                  <li class="list-group-item">
+                    <p style="font-size:11px;color:rgb(170,170,170);font-weight:700;">Please type your password below to confirm that it is the owner who is deleting the account</p>
+                    <input type="password" placeholder="Enter password" class="inpt_bx form-control form-control-sm"> 
+                    </li>
+                    </ul>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="delte_btn" data-toggle="modal" data-target="#bootstrapModel">Delete </button>
+                            </div>
+                            </div>
+                </div>
+         <!--  <div class="back_grnd form-group required col-md-8">
+          <img class="contain_box" src="assets/images/bg.jpg"> 
+            </div> -->
+            
+    </div>
+    <!-- Popups Start here -->
+    <div id="bootstrapModel" class="modal fade" role="dialog">
+
+
+      <div class="modal-dialog">
+    
+    
+        <!-- Modal content-->
+    
+    
+        <div class="modal-content">
+    
+    
+          <div class="modal-header">
+    
+            <h4 class="modal-title" style="float:left;text-align: left;color:#52555b;font-size:12px;margin-top: 12px;">Delete Account</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+    
+          </div>
+    
+    
+    <!-- model body section -->
+    
+    
+          <div class="modal-body">
+    
+    
+            <p style="color:#52555b;font-size:12px;">Confirm that you’re sure you want to delete your account
+              by entering ‘delete’ below</p>
+              <input type="delete" placeholder="Type 'delete'" style="width: 100%;
+              border: 1px solid #f5f6f8;height:25px;font-size:10px;padding-left:7px;"/>
+    
+          </div>
+    
+    
+          <div class="modal-footer">
+    
+    
+            <button type="button" class="btn btn-default close_btn" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default modaldelte_btn" (click)="delete()"  data-dismiss="modal">Delete</button>
+    
+    
+          </div>
+    
+    
+        </div>
+    
+    
+      </div>
+    
+    
+    </div>
+    <!-- Popups Ends here -->
+  
+  </div>

@@ -1,0 +1,182 @@
+
+ <div class="left">
+    <div class="item">
+    <span class="glyphicon glyphicon-align-left"></span>
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-option-horizontal gen_ikn"></span>
+           General</div>
+    <a  routerLink="/home"><div class="item">
+    <span class="glyphicon"><img  class="img_resp" src="assets/images/history.svg"/></span>
+       History</div></a>
+    <div class="item" (click)="myDropFunc()">
+    <span class="glyphicon"><img  class="img_resp"   src="assets/images/profile.svg"/></span>
+        Profile<i (click)="myDropFunc()" class="fa fa-caret-down" style="margin-left:25px;"></i>
+       
+      </div>
+       <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+          <a href="#" routerLink="/yourprofile" class="w3-bar-item w3-button"> - Edit Profile</a>
+          <a href="#" routerLink="/payment" class="w3-bar-item w3-button"> - Change Payment</a>
+          <a href="#" routerLink="/changepassword" class="w3-bar-item w3-button"> - Change Password</a>
+
+        </div> 
+    <div class="item">
+    <span class="glyphicon glyphicon-option-horizontal gen_ikn"></span>
+       Support</div> 
+    <div class="item"  routerLink="/support">
+    <span class="glyphicon"><img class="img_resp" src="assets/images/support.svg"/></span>
+        FAQ</div>
+  
+  </div> 
+
+    
+ <div class="header" id="main" style="background:#fff !important;">
+    <div class="row">
+      <div class="col-md-6" (click)="openNav()">
+          <img class="col-md-6" src="assets/images/Shokuni-Logo_Black.png" style="margin:21px;padding-left:81px;
+          width:203px;
+          padding-top:12px;margin-left:49px;">
+      </div>
+  
+      <!-- <div class="col-md-4">
+        <p><img  src="assets/images/background.png" style="margin:20px;
+          width: 34px;
+          border-radius: 50%;
+          float: right;
+          height: 34px;"><img  src="assets/images/event.png" style="margin: 27px;
+          width: 20px;
+          border-radius: 50%;
+          float: right;
+          height: 22px;"></p>
+      </div> -->
+      <div class="dropdown" style="margin-left:180px;"> 
+          <div class="col-md-4"  style="margin-top:16px;">
+              <img  src="assets/images/event.png" style="margin: 27px;
+              width: 20px;
+              border-radius: 50%;
+              float: right; 
+              height: 22px;">
+           </div>
+          <div class="col-md-4" style="margin-top:16px;">
+             <p><img (click)="myFunction()" class="dropbtn" src="assets/images/background.png" style="margin:20px;
+          width: 34px;
+          border-radius: 50%;
+          float: right;
+          height: 34px;"></p>
+         </div>
+             <div id="myDropdown" class="dropdown-content" style="margin-top: 70px;">
+                  <a href="" routerLink="/login">Sign out</a>
+                  <!-- <a href="#about">About</a>
+                  <a href="#contact">Contact</a> -->
+             </div>
+             
+   </div>
+        
+       
+        
+    </div>
+    
+      
+  </div> 
+<div class="bak" style="background:#f0f1f6;">
+ 
+ <!--  <div class="sub-header"> -->
+      
+<!--   </div> -->
+        <ngx-spinner
+        bdColor="rgba(51,51,51,0.8)"
+        size="medium"
+        color="#fff"
+        loadingText="Loading..."
+        type="ball-scale-multiple">
+        </ngx-spinner>
+    <div class="row">
+      <h4 style="text-align:left;
+      margin-left:159px;
+      font-size: 18px;font-weight:bold;">Payment</h4>
+        <div class="form-group required col-md-12 ">
+          <div class="container-fluid">
+            <div class="card card-block card_list">
+              
+            <div class="errorMessage" *ngIf="invalidcred">Invalid Login Details</div>
+          <form *ngIf="login_form" [formGroup]="login_form" (submit)="Submitlogin(login_form)" class="bak form-horizontal" novalidate>
+              <p class="p_tag">Change Payment Info</p>
+                <!-- login form HTML -->
+                 <ul class="list-group list-group-flush text-left">
+                  <li class="list-group-item"> 
+                    <p style="color:#646368;font-size:10px;">To change your payment information,enter your new card number below.</p>
+                    <!-- get name of donor -->
+                    <div class="form-row" style="padding-left:19px;">
+                      <div class="form-group required col-md-12">
+                       <label for="amount" class="col_pss col-form-label col-form-label-sm">Card Number: <span class="aster"> *</span></label> 
+
+                       <input type="text" formControlName="cnumber" name="din" (ngModelChange)="onChange($event)"  
+     [(ngModel)]="value" appNumberOnly class="form-control" maxlength="19">
+
+                      <!--   <input type="text"  formControlName="cnumber" class="form-control form-control-sm" placeholder="" autocomplete="off"  maxlength="19" required style="width:40%;"/> -->
+
+
+                      </div>
+                      <hr>
+                      </div>
+                      <div class="form-row" style="padding-left:19px;">
+                      <div class="form-group required col-md-12">
+                       <label for="password" class="col_pss col-form-label col-form-label-sm">Expiry Date: <span class="aster"> *</span></label> 
+                   
+                       <div class="row" style="width:32%;margin:0px;height: 30px;">
+
+                  
+                          <input type="date"  formControlName="sortcde" [(ngModel)]="expiry_dat" class="inpt_bx form-control form-control-sm col-md-9" placeholder="" autocomplete="off"
+                          required /><!-- <p class="col-md-1"> - </p>
+                          <input type="year"  formControlName="sortcde" class="inpt_bx form-control form-control-sm col-md-5" placeholder="" autocomplete="off"  required /> -->
+                         
+                         <!--  <p class="col-md-1"> - </p>
+                       <input type="date"  formControlName="sortcde" class="inpt_bx  form-control form-control-sm col-md-3" placeholder="" autocomplete="off" maxlength="4" required /> --><!--  <p class="col-md-1"> - </p>
+                        <input type="number"  formControlName="sortcde" class="inpt_bx form-control form-control-sm col-md-3" placeholder="" autocomplete="off" maxlength="4" required /> -->
+                       </div> 
+                      
+                      </div>
+                    </div>
+                    <div class="form-row" style="padding-left:19px;">
+                        <div class="form-group required col-md-12">
+                        <label for="password" class="col_pss col-form-label col-form-label-sm">CSV: <span class="aster"> *</span></label> 
+                          <input type="tel" formControlName="csv" class="inpt_box form-control form-control-sm" placeholder="" autocomplete="off"  maxlength="4" required />
+                        </div>
+                      </div>
+                   
+                     </li>
+                </ul> 
+                <p style="color:#c2c2c2;font-size:11px;margin: 10px;"> <span class="aster"> *</span> Indicates Required</p>
+                <div class="">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="col-md-6"><button class="save_btn">Save</button>
+                          <button class="cancl_butn" (click)="cancel()">Cancel
+
+                            </button></div>
+                          <!-- <button class="cancl_butn" (click)="cancel()">Cancel
+
+                            </button> -->
+                      </div>
+                     <!--  <div class="col-md-6">
+                          <button [disabled]="!login_form.valid" class="submit_btn_clear">Cancel
+
+                            </button>
+                      </div> -->
+                    </div>
+                    
+                  </div>
+                <!-- submit button -->
+               
+              </form>
+            </div>
+            
+            </div>
+          
+          </div>
+       
+    </div>
+    
+  
+  
+  </div>

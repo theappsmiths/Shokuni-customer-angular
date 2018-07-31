@@ -1,0 +1,83 @@
+<div layout-margin class="bak container-fluid">
+ 
+  <div class="bak row">
+
+      <div class="bak form-group required col-md-4 main_div">
+        <div class="bak main_div">
+          <div class="img_length">
+              <img class="image_resp" src="assets/images/Shokuni-Logo_Black.png">
+          </div>
+          <div class="text_wrd">
+            <p>Login To Admin</p>
+          </div>
+          <div class="errorMessage" *ngIf="invalidcred">Invalid Login Details</div>
+          <!-- <ng4-loading-spinner> </ng4-loading-spinner> -->
+        <form *ngIf="login_form" [formGroup]="login_form" (submit)="submitLogin(login_form)" class="bak form-horizontal" novalidate>
+
+              <!-- login form HTML -->
+               <ul class="bak list-group list-group-flush text-left">
+                <li class="bak list-group-item"> 
+                  <!-- get name of donor -->
+                  <div class="bak form-row">
+                    
+                    <div class="bak form-group required col-md-12 email_btm">
+                     <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                      <input type="text"  formControlName="email" class="email_txt bak form-control form-control-sm" placeholder="Email" autocomplete="off" maxlength="255" required />
+                      
+                   
+                    </div>
+                    
+                    <hr>
+                    </div>
+                    <div class="bak form-row">
+                    <div class="bak form-group required col-md-12">
+                     <!--  <label for="password" class="col-form-label col-form-label-sm">Password</label> -->
+                      <input type="password" formControlName="password" class="email_txt bak form-control form-control-sm" placeholder="Password" autocomplete="off" maxlength="20" required />
+                    </div>
+                  </div>
+                  <div class="bak form-row">
+                      <div class="bak form-group required col-md-6">
+                          <input type="checkbox" [checked]="false"  id ="remember" /><span class="rember_pswrd" >Remember</span>
+                      </div>
+                      <div class="form-group required col-md-6">
+                      <!-- <a class="forgt_psswrd" href="" routerLink="/forgotpassword/:token">Forgot Password?</a> -->
+                      <!-- <a class="forgt_psswrd" href="" routerLink="/changepassword">Forgot Password?</a> -->
+                      <a class="forgt_psswrd" href="" routerLink="/payment">Forgot Password?</a>
+                      </div>
+                  </div>
+
+                  <div class="submit_btn">
+                    <button [disabled]="!login_form.valid" class="btn  submit_btn">Sign In
+                 
+                    </button>
+                 
+                  </div>
+                  <ngx-spinner
+bdColor = "rgba(51, 51, 51, 0.8)"
+size = "large"
+color = "#fff"
+type = "ball-scale-multiple"
+></ngx-spinner>
+                  <!-- <div class="loader"></div> -->
+                  
+                </li>
+              </ul> 
+        
+              <!-- submit button -->
+             
+            </form>
+            <div class="sign_upp">
+              <p>Don't have an account?<a class="anchor_tag" href="" routerLink="/dashboard">Sign Up</a></p>
+              <!-- <a class="btn btn-link" routerLink="/dashboard">Dashboard</a> -->
+            </div>
+          </div>
+        </div>
+        <div class="back_grnd form-group required col-md-8">
+        <img class="contain_box" src="assets/images/bg.jpg"> 
+          </div>
+    
+  </div>
+  
+
+
+</div>

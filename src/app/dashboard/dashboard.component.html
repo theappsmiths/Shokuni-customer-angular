@@ -1,0 +1,92 @@
+<div class="container-fluid">
+ 
+  <div class="row">
+
+      <div class="form-group required col-md-4 main_div">
+        <div class="main_div">
+          <div class="img_length">
+              <img class="image_resp" src="assets/images/Shokuni-Logo_Black.png">
+          </div>
+          <div class="text_wrd">
+            <p>Signup</p>
+          </div>
+          <div class="errorMessage" *ngIf="invalidcred">Invalid Details</div>
+
+        <form *ngIf="login_form" [formGroup]="login_form" (submit)="submitLogin(login_form)" class="form-horizontal" novalidate>
+
+              <!-- login form HTML -->
+               <ul class="list-group list-group-flush text-left">
+                <li class="list-group-item"> 
+                  <!-- get name of donor -->
+                  <div class="form-row">
+                    <div class="form-group required col-md-12 email_btm">
+                     <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                      <input type="text"  formControlName="fname" class="email_txt form-control form-control-sm" placeholder="First Name" autocomplete="on" maxlength="25" required />
+                    </div>
+                    
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group required col-md-12 email_btm">
+                       <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                        <input type="text"  formControlName="lname" class="email_txt form-control form-control-sm" placeholder="Last Name" autocomplete="on" maxlength="25" required />
+                      </div>
+                      
+                      </div>
+
+                      <div class="form-row">
+                        <div class="form-group required col-md-12 email_btm">
+                         <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                          <input type="number"  formControlName="mobnumber" class="email_txt form-control form-control-sm" placeholder="Mobile Number" autocomplete="off" maxlength="13" pattern="[0-9]*" required />
+                        </div>
+                        
+                      </div>
+
+                  <div class="form-row">
+                    <div class="form-group required col-md-12 email_btm">
+                     <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                      <input type="text"  formControlName="email" class="email_txt form-control form-control-sm" placeholder="Email" autocomplete="off" maxlength="255" required />
+                    </div>
+                    
+                  </div>
+
+                    <div class="form-row">
+                    <div class="form-group required col-md-12">
+                     <!--  <label for="password" class="col-form-label col-form-label-sm">Password</label> -->
+                      <input type="password" formControlName="password" class="email_txt form-control form-control-sm" placeholder="Password" autocomplete="off" maxlength="20" required />
+                    </div>
+                  </div>
+                 <!--  <div class="form-row">
+                      <div class="form-group required col-md-6">
+                          <input type="checkbox" [checked]="false"  id ="remember" /><span class="rember_pswrd" >Remember</span>
+                      </div>
+                      <div class="form-group required col-md-6">
+                      <a class="forgt_psswrd" href="" (click)="forgot()">Forgot Password?</a>
+                      </div>
+                  </div> -->
+
+                  <div class="submit_btn">
+                    <button [disabled]="!login_form.valid" class="btn  submit_btn">Sign Up
+
+                    </button>
+                  </div>
+                  
+                </li>
+              </ul> 
+        
+              <!-- submit button -->
+             
+            </form>
+           
+          </div>
+        </div>
+        <div class="back_grnd form-group required col-md-8 contain_box">
+       <!--  <img src="assets/images/background.png" style="background-repeat: no-repeat !important;
+        background-size:cover !important;
+        width:100% !important; height:560px !important;"> -->
+          </div>
+    
+  </div>
+  
+
+
+</div>

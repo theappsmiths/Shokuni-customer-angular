@@ -1,0 +1,306 @@
+
+ <div class="left">
+    <div class="item">
+    <span class="glyphicon glyphicon-align-left"></span>
+    </div>
+    <div class="item">
+        <span class="glyphicon glyphicon-option-horizontal"></span>
+           General</div>
+    <div class="item">
+    <span class="glyphicon"><img routerLink="/home" class="img_resp" src="assets/images/history.svg"/></span>
+       History</div>
+    <div class="item">
+    <span class="glyphicon"><img  class="img_resp"   src="assets/images/profile.svg"/></span>
+        Profile<i (click)="myDropFunc()" class="fa fa-caret-down" style="margin-left:25px;"></i>
+       
+      </div>
+       <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+          <a href="#" routerLink="/yourprofile" class="w3-bar-item w3-button"> - Edit Profile</a>
+          <a href="#" routerLink="/payment" class="w3-bar-item w3-button"> - Change Payment</a>
+          <a href="#" routerLink="/changepassword" class="w3-bar-item w3-button"> - Change Password</a>
+
+        </div> 
+    <div class="item">
+    <span class="glyphicon glyphicon-option-horizontal "></span>
+       Support</div> 
+    <div class="item" routerLink="/support">
+    <span class="glyphicon"><img class="img_resp" src="assets/images/support.svg"/></span>
+        FAQ</div>
+  
+  </div> 
+    
+
+<div class="header bg_clr" id="main"> 
+    <div class="row">
+      <div class="col-md-4" (click)="openNav()">
+         <img class="col-md-4 image_respon" src="assets/images/Shokuni-Logo_Black.png">
+      </div>
+
+
+
+      <div class="dropdown" style="margin-left:480px;"> 
+          <div class="col-md-4"  style="margin-top:16px;">
+              <img  src="assets/images/event.png" style="margin: 27px;
+              width: 20px;
+              border-radius: 50%;
+              float: right; 
+              height: 22px;">
+           </div>
+          <div class="col-md-4" style="margin-top:16px;">
+             <p><img (click)="myFunction()" class="dropbtn" src="assets/images/background.png" style="margin:20px;
+          width: 34px;
+          border-radius: 50%;
+          float: right;
+          height: 34px;"></p>
+         </div>
+             <div id="myDropdown" class="dropdown-content" style="margin-top: 70px;">
+                  <a href="" routerLink="/login">Sign out</a>
+                  <!-- <a href="#about">About</a>
+                  <a href="#contact">Contact</a> -->
+             </div>
+             
+   </div> 
+       
+  
+      <!-- <div class="col-md-7">
+        <p><img class="bggg_res" src="assets/images/background.png"></p>
+        <p><img class="evnt_resp" src="assets/images/event.png"></p>
+      </div> -->
+      </div>
+    
+      
+  </div>
+
+
+<div class="bak" style="background:#f0f1f6;height: 100vh;">
+    <ngx-spinner
+    bdColor = "rgba(51, 51, 51, 0.8)"
+    size = "large"
+    color = "#fff"
+    type = "ball-scale-multiple"
+    ></ngx-spinner>
+  
+ <!--  <div class="sub-header"> -->
+      
+  <!-- </div> -->
+  <h4 class="h4_tag">History</h4>
+          <!-- First Row Starts Here -->
+         
+      <div class="row row_styl">
+  
+        <div class="form-group required col-md-4">
+         <div class="container-fluid">
+           <div class="card card-block card_list">
+          <p class="p_taggb">The Gentleman Barbers</p>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="p_prdct">Product</p></div>
+            <div class="col-md-6"><p class="p_amount">Amount</p></div>
+          </div>
+          <div class="row">
+              <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+              <div class="col-md-6"><p class="p_dollar">£10</p></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+              </div>
+              <div class="row">
+                  <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                  <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                    <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                  </div>
+
+            </div>
+            </div>
+
+         </div>
+         <!-- Ends First Col -->
+
+         <div class="form-group required col-md-4">
+            <div class="container-fluid">
+              <div class="card card-block card_list">
+                <p class="p_taggb">Shop 2</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="p_prdct">Product</p></div>
+                  <div class="col-md-6"><p class="p_amount">Amount</p></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+                    <div class="col-md-6"><p class="p_dollar">£10</p></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                      <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                        <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                          <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                        </div>
+      
+                  </div>
+                  </div>
+      
+               </div>
+                  <!-- Ends Sec col -->
+                  <div class="form-group required col-md-4">
+                      <div class="container-fluid">
+                        <div class="card card-block card_list">
+                          <p class="p_taggb">Shop 3</p>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <p class="p_prdct">Product</p></div>
+                            <div class="col-md-6"><p class="p_amount">Amount</p></div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+                              <div class="col-md-6"><p class="p_dollar">£10</p></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                                <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                                  <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                                    <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                                  </div>
+                
+                            </div>
+                            </div>
+                
+                         </div>
+                          <!-- Ends Third Col -->
+          </div>
+
+                    <!-- First Row Ends Here -->
+
+                    <div class="row row_styl">
+  
+                        <div class="form-group required col-md-4">
+                          <div class="container-fluid">
+                            <div class="card card-block card_list">
+                              <p class="p_taggb">The Gentleman Barbers</p>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <p class="p_prdct">Product</p></div>
+                                <div class="col-md-6"><p class="p_amount">Amount</p></div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+                                  <div class="col-md-6"><p class="p_dollar">£10</p></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                                    <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                                      <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                                        <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                                      </div>
+                    
+                                </div>
+                                </div>
+                    
+                             </div>
+                             <!-- Ends First Col -->
+                    
+                             <div class="form-group required col-md-4">
+                                <div class="container-fluid">
+                                  <div class="card card-block card_list">
+                                    <p class="p_taggb">Shop 2</p>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <p class="p_prdct">Product</p></div>
+                                      <div class="col-md-6"><p class="p_amount">Amount</p></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+                                        <div class="col-md-6"><p class="p_dollar">£10</p></div>
+                                      </div>
+                                      <div class="row">
+                                          <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                                          <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                                            <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                                              <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                                            </div>
+                          
+                                      </div>
+                                      </div>
+                          
+                                   </div>
+                                      <!-- Ends Sec col -->
+                                      <div class="form-group required col-md-4">
+                                          <div class="container-fluid">
+                                            <div class="card card-block card_list">
+                                              <p class="p_taggb">Shop 3</p>
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                  <p class="p_prdct">Product</p></div>
+                                                <div class="col-md-6"><p class="p_amount">Amount</p></div>
+                                              </div>
+                                              <div class="row">
+                                                  <div class="col-md-6"><p class="p_regcut">Regular Cut</p></div>
+                                                  <div class="col-md-6"><p class="p_dollar">£10</p></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6"><p class="p_shmpu">Shampoo & Condition</p></div>
+                                                    <div class="col-md-6"><p  class="p_dollar">£5</p></div>
+                                                  </div>
+                                                  <div class="row">
+                                                      <div class="col-md-6"><p  class="p_shmpu" >Beard Shave</p></div>
+                                                      <div class="col-md-6"><p class="p_dollar">£6</p></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-5"><button class="exprt_btn">Export </button></div>
+                                                        <div class="col-md-7"><p class="p_total">Total  <span class="grnd_totl">£21 </span></p></div>
+                                                      </div>
+                                    
+                                                </div>
+                                                </div>
+                                    
+                                             </div>
+                                              <!-- Ends Third Col -->
+                              </div>
+                    
+                  <!-- Second Row Ends Here -->
+                  <nav aria-label="Page navigation example" style="text-align:center!important">
+                      <ul class="pagination" style="border:0px;background:none;">
+                       <!--  <li class=" disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a> 
+                        </li> -->
+                        <li ><a href="#" style="background:#6a61e9;color:#fff;border-radius: 25px;
+                          ">1</a></li>
+                        <li ><a class="page-link" href="#" style="color:#cbdeff;">2</a></li>
+                        <li><a class="page-link" href="#" style="color:#cbdeff;">3</a></li>
+                        <li><a class="page-link" href="#" style="color:#cbdeff;">4</a></li>
+                        <li><a class="page-link" href="#" style="color:#cbdeff;">5</a></li>
+                        <li><a class="page-link" href="#" style="color:#cbdeff;">6</a></li>
+                       <!--  <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li> -->
+                      </ul>
+                    </nav>
+                
+</div>

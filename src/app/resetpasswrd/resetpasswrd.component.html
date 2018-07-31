@@ -1,0 +1,50 @@
+<div class="bak container-fluid">
+ 
+  <div class="bak row">
+
+      <div class="bak form-group required col-md-4 main_div">
+        <div class="bak main_div">
+          <div class="img_length">
+              <img class="image_resp" src="assets/images/Shokuni-Logo_Black.png">
+          </div>
+          <div class="text_wrd">
+            <p>Reset Password</p>
+          </div>
+        <form *ngIf="login_form" [formGroup]="login_form" (submit)="submitLogin(login_form)" class="bak form_grp form-horizontal" novalidate>
+
+              <!-- login form HTML -->
+               <ul class="bak list-group list-group-flush text-left">
+                <li class="bak list-group-item"> 
+                  <!-- get name of donor -->
+                    <div class="bak form-row">
+                       <div class="bak form-group required col-md-12 email_btn">
+                     <!--  <label for="amount" class="col-form-label col-form-label-sm">Email/Username</label> -->
+                          <input type="text"  formControlName="email" class="bak email_txt form-control form-control-sm" placeholder="New Password" autocomplete="off" maxlength="12" required />
+                    </div>
+                    
+                    </div>
+                   
+                  <div class="submit_btn">
+                    <button [disabled]="!login_form.valid" class="btn  forgotsubmit_btn">Reset Password
+
+                    </button>
+                  </div>
+                  
+                </li>
+              </ul> 
+        
+              <!-- submit button -->
+             
+            </form>
+           
+          </div>
+        </div>
+        <div class="back_grnd form-group required col-md-8">
+         <img class="contain_box" src="assets/images/bg.jpg"> 
+          </div>
+    
+  </div>
+  
+
+
+</div>
