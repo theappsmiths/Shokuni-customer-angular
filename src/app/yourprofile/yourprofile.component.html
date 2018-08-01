@@ -6,9 +6,9 @@
     <div class="item">
         <span class="glyphicon glyphicon-option-horizontal"></span>
            General</div>
-    <div class="item">
-    <span class="glyphicon"  routerLink="/home"><img  routerLink="/home" class="img_resp" src="assets/images/history.svg"/></span>
-       History</div>
+    <a href=""  routerLink="/home"><div class="item">
+    <span class="glyphicon"><img  routerLink="/home" class="img_resp" src="assets/images/history.svg"/></span>
+       History</div></a>
     <div class="item">
     <span class="glyphicon"><img  class="img_resp"   src="assets/images/profile.svg"/></span>
         Profile<i (click)="myDropFunc()" class="fa fa-caret-down" style="margin-left:25px;"></i>
@@ -71,7 +71,7 @@
     size="medium"
     color="#fff"
     loadingText="Loading..."
-    type="ball-scale-multiple">
+    type="ball-fussion">
   </ngx-spinner>
   <br>
   <div class="sub-header">
@@ -139,11 +139,14 @@
                               <div class="row" style="padding-left:16px;">
                                   <div class="form-group required col-md-2">
                                       <label for="password" class="col_pss col-form-label col-form-label-sm">Profile Photo:</label><br>
-                                      <img src="assets/images/barber.jpeg"  width="125px;" style="margin:0px;
+
+                                      <!-- <img src="assets/images/barber.jpeg"  width="125px;" style="margin:0px;
+                                      padding-left:0px;"> -->
+                                      <img [src]="imgsrc"  width="125px;" style="margin:0px;
                                       padding-left:0px;">
                                      <!--  <img *ngIf="prodata.image_url!=''" src="{{prodata.image_url}}"  width="125px;" style="margin:0px;
                                       padding-left:0px;"> -->
-                                    <!--   <img [src]="url" height="200">-->
+                                    <!--   <img [src]="file" height="200">-->
                                    <!-- <input type="file" (change)="onFileChange($event)"  id="avatar" #fileInput>   -->
                                   
                                     </div>

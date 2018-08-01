@@ -16,6 +16,7 @@ export class YourprofileComponent implements OnInit {
   login_form:FormGroup;
   invalidcred: any;
   submitForm: any;
+  imgsrc:string='assets/images/barber.jpeg';
   formGroup = this.fb.group({
     file: [null, Validators.required]
   });
@@ -24,12 +25,13 @@ export class YourprofileComponent implements OnInit {
   countries: any;
   image_path: string;
   profilee: any;
+
   onFileChange(event) {
     let reader = new FileReader();
    
     if(event.target.files && event.target.files.length) {
       const [file] = event.target.files;
-      console.log(file);
+     
       reader.readAsDataURL(file);
     
       reader.onload = () => {
@@ -38,7 +40,8 @@ export class YourprofileComponent implements OnInit {
           
         });
         this.file1=file;
-        console.log(this.file1);
+        this.imgsrc=file;
+       console.log(this.imgsrc);
         // need to run CD since file load runs outside of zone
         this.cd.markForCheck();
       };
