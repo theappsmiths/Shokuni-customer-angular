@@ -51,7 +51,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
         component: ForgotpasswordComponent
       },
       {
-        path: 'dashboard',
+        path: 'register',
         component: DashboardComponent
       },
       {

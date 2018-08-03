@@ -6,10 +6,10 @@
     <div class="item">
         <span class="glyphicon glyphicon-option-horizontal"></span>
            General</div>
-    <div class="item">
-    <span class="glyphicon"><img routerLink="/home" class="img_resp" src="assets/images/history.svg"/></span>
-       History</div>
-    <div class="item">
+    <a href="" routerLink="/home"><div class="item">
+    <span class="glyphicon"><img class="img_resp" src="assets/images/history.svg"/></span>
+       History</div></a>
+    <div class="item" (click)="myDropFunc()">
     <span class="glyphicon"><img  class="img_resp"   src="assets/images/profile.svg"/></span>
         Profile<i (click)="myDropFunc()" class="fa fa-caret-down" style="margin-left:25px;"></i>
        
@@ -23,9 +23,9 @@
     <div class="item">
     <span class="glyphicon glyphicon-option-horizontal "></span>
        Support</div> 
-    <div class="item" routerLink="/support">
+    <a href=""  routerLink="/support"><div class="item">
     <span class="glyphicon"><img class="img_resp" src="assets/images/support.svg"/></span>
-        FAQ</div>
+        FAQ</div></a>
   
   </div> 
     
@@ -33,7 +33,7 @@
 <div class="header bg_clr" id="main"> 
     <div class="row">
       <div class="col-md-4">
-          <h2 style="color:#132149;font-size:32px;font-weight:bold;margin-left:107px;font-family:odudo;text-transform: lowercase;">Shokuni</h2>
+          <h2 style="color:#132149;font-size:32px;font-weight:bold;margin-left:5px;font-family:odudo;text-transform: lowercase;">Shokuni</h2>
         <!--  <img class="col-md-4 image_respon" src="assets/images/Shokuni-Logo_Black.png"> -->
       </div>
      <div class="dropdown col-md-8">
@@ -75,7 +75,8 @@
   </div>
 
 
-<div class="bak" style="background:#f0f1f6;height: 100vh;">
+<div class="bak" style="background:#f0f1f6;height: 100vh;width: 90%;
+margin: 0 auto;">
     <ngx-spinner
     bdColor = "rgba(51, 51, 51, 0.8)"
     size = "large"
@@ -293,13 +294,13 @@
                        <!--  <li class=" disabled">
                         <a class="page-link" href="#" tabindex="-1">Previous</a> 
                         </li> -->
-                        <li ><a href="#" style="background:#6a61e9;color:#fff;border-radius: 25px;
+                        <li ><a href="" style="background:#6a61e9;color:#fff;border-radius: 25px;
                           ">1</a></li>
-                        <li ><a class="page-link" href="#" style="color:#cbdeff;">2</a></li>
-                        <li><a class="page-link" href="#" style="color:#cbdeff;">3</a></li>
-                        <li><a class="page-link" href="#" style="color:#cbdeff;">4</a></li>
-                        <li><a class="page-link" href="#" style="color:#cbdeff;">5</a></li>
-                        <li><a class="page-link" href="#" style="color:#cbdeff;">6</a></li>
+                        <li ><a class="page-link"  style="color:#cbdeff;">2</a></li>
+                        <li><a class="page-link"  style="color:#cbdeff;">3</a></li>
+                        <li><a class="page-link"  style="color:#cbdeff;">4</a></li>
+                        <li><a class="page-link" style="color:#cbdeff;">5</a></li>
+                        <li><a class="page-link" style="color:#cbdeff;">6</a></li>
                        <!--  <li class="page-item">
                           <a class="page-link" href="#">Next</a>
                         </li> -->

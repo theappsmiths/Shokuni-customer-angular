@@ -59,7 +59,9 @@ input:valid + span:after {
     display: inline-block;
     white-space: nowrap;
     width: 50px;
-    transition: width 1s ;
+    transition: width 1s;
+    margin-left: 57px;
+    margin-top: 33px;
   }
   
   .right {
@@ -228,8 +230,8 @@ input:valid + span:after {
     
 }
 .card_list{
-    width:83%;
-    margin:0 auto;
+   /*  width:83%;
+    margin:0 auto; */
     border:none;
     background:#fff;
 }

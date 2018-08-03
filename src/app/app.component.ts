@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 //import { FormGroup, FormControl, Validators, NgForm, AbstractControl } from '@angular/forms';
 //import { Router } from '@angular/router';
@@ -18,7 +19,15 @@ export class AppComponent implements OnInit {
     
     
   }
-
+  RouterConfig = [
+    { path: '', redirectTo: '/login', pathMatch: 'full' },
+    { path: 'login', component: LoginComponent,
+      children: [
+        { path: '', redirectTo: '/login', pathMatch: 'full' },
+        { path: 'login', component: LoginComponent }
+      ] 
+    }
+  ];
   /**
    * Method to submit login form
    */

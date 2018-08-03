@@ -8,7 +8,9 @@
   display: inline-block;
   white-space: nowrap;
   width: 50px;
-  transition: width 1s ;
+  transition: width 1s;
+  margin-left: 57px;
+  margin-top: 33px;
 }
 
 .right {
@@ -60,13 +62,12 @@ vertical-align: middle !important;
 #mySidenav{
   width : 40px;
 }
-
 #main{
   margin-left : 60px;
 }
 .h4_tag{
  /*  text-align: left; */
-      margin-left: 187px;
+      margin-left: 58px;
       font-weight: bold;
       font-size: 18px;
       margin-top: -30px;
@@ -109,9 +110,9 @@ vertical-align: middle !important;
 
 
 .row_styl{
-  width:80%;
+  /* width:80%; */
   margin: 0 auto;
-  padding-top: 43px;
+  padding-top: 2px;
 }
 .row_styl1{
   width:89%;
@@ -344,3 +345,11 @@ a {
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+.container-fluid {
+  /* width: 100%; */
+ padding-right: 0px; 
+   padding-left: 0px; 
+   margin-right: 0; 
+   margin-left: 0; 
+}

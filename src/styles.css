@@ -127,6 +127,9 @@
    padding-top:28px;
    
 }
+a{
+  text-decoration: none !important;
+}
 .image_resp{
     width:48%;
 }
@@ -136,9 +139,10 @@
 }
 .text_wrd{
     text-align: center;
-    margin-top: 25px;
+    margin-top: 2px;
     color: rgb(170,170,170);
     font-weight: 500;
+    font-family: odudo !important;
 }
 .submit_btn{
     text-align: center;
@@ -154,7 +158,7 @@
 .forgotsubmit_btn{
     margin-top:75px;
     text-align: center;
-    font-size: 10px;
+    font-size: 9px;
     border-radius: 73px;
     background-color: #132149;
     color: #f2f3d9;
@@ -174,7 +178,7 @@
 .anchor_tag{
     text-decoration: none;
     padding-left: 5px;
-    color:rgb(240, 102, 102);
+    color:rgb(245, 78, 78);
     font-weight:500;
     opacity:0.6;
 }
